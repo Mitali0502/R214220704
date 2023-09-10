@@ -38,32 +38,24 @@ This service uses the following Python libraries:
 
 ## Installation
 
-1. Clone the repository:
-
-   ```shell
-   git clone <repository-url>
-   cd number-management-service
 Install the required dependencies:
+```pip install Flask requests```
 
-shell
-Copy code
-pip install Flask requests
-Running the Service
+## Running the Service
 You can start the service by running the following command:
-
-python app.py
+```python app.py```
 The service will be accessible at http://localhost:8008.
-Example
+
+## Example:
 Suppose you have the service running locally, and you want to retrieve numbers from remote URLs. You can make a GET request to the /numbers endpoint with the url query parameter.
 Example:
 
-shell
-Copy code
-curl "http://localhost:8008/numbers?url=http://20.244.56.144/numbers/primes&url=http://20.244.56.144/numbers/fibo&url=http://20.244.56.144/numbers/odd"
-This will return a JSON response with merged unique numbers in ascending order.
+```"http://localhost:8008/numbers?url=http://20.244.56.144/numbers/primes&url=http://20.244.56.144/numbers/fibo&url=http://20.244.56.144/numbers/odd"```
 
-json
-Copy code
+*This will return a JSON response with merged unique numbers in ascending order.*
+
+```json
+
 {
   "numbers": [1, 2, 3, 5, 7, 8, 9, 11, 13, 15, 17, 19, 21, 23]
 }
